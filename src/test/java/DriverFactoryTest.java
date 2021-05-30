@@ -20,116 +20,116 @@ public class DriverFactoryTest {
 //        driver.get("http://www.google.co.in");
 //    }
 
-    @Test
-    public void testSystemChromeDriver() throws InterruptedException {
-        driver = new ChromeDriver();
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverFactoryDefault() throws InterruptedException {
-        DriverFactory obj = new DriverFactory() {};
-        driver = obj.getDriver();
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverFactoryChrome() throws InterruptedException {
-        DriverFactory obj = new DriverFactory() {};
-        driver = obj.getDriver("chrome");
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverFactoryFirefox() throws InterruptedException {
-        DriverFactory obj = new DriverFactory() {};
-        driver = obj.getDriver("firefox");
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverFactoryOpera() throws InterruptedException {
-        DriverFactory obj = new DriverFactory() {};
-        driver = obj.getDriver("opera");
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverFactoryEdge() throws InterruptedException {
-        DriverFactory obj = new DriverFactory() {};
-        driver = obj.getDriver("edge");
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverFactoryChromeHeadless() throws InterruptedException {
-        DriverFactory obj = new DriverFactory() {};
-        driver = obj.getDriver("chrome", true);
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverFactoryFirefoxHeadless() throws InterruptedException {
-        DriverFactory obj = new DriverFactory() {};
-        driver = obj.getDriver("firefox", true);
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverFactoryOperaHeadless() throws InterruptedException {
-        DriverFactory obj = new DriverFactory() {};
-        driver = obj.getDriver("opera", true);
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverMethodsDefault() throws InterruptedException {
-        DriverMethods obj = new DriverMethods();
-        driver = obj.driver;
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverMethodsChrome() throws InterruptedException {
-        DriverMethods obj = new DriverMethods("chrome");
-        driver = obj.driver;
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverMethodsFirefox() throws InterruptedException {
-        DriverMethods obj = new DriverMethods("firefox");
-        driver = obj.driver;
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverMethodsOpera() throws InterruptedException {
-        DriverMethods obj = new DriverMethods("opera");
-        driver = obj.driver;
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverMethodsEdge() throws InterruptedException {
-        DriverMethods obj = new DriverMethods("edge");
-        driver = obj.driver;
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
+//    @Test
+//    public void testSystemChromeDriver() throws InterruptedException {
+//        driver = new ChromeDriver();
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverFactoryDefault() throws InterruptedException {
+//        DriverFactory obj = new DriverFactory() {};
+//        driver = obj.getDriver();
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverFactoryChrome() throws InterruptedException {
+//        DriverFactory obj = new DriverFactory() {};
+//        driver = obj.getDriver("chrome");
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverFactoryFirefox() throws InterruptedException {
+//        DriverFactory obj = new DriverFactory() {};
+//        driver = obj.getDriver("firefox");
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverFactoryOpera() throws InterruptedException {
+//        DriverFactory obj = new DriverFactory() {};
+//        driver = obj.getDriver("opera");
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverFactoryEdge() throws InterruptedException {
+//        DriverFactory obj = new DriverFactory() {};
+//        driver = obj.getDriver("edge");
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverFactoryChromeHeadless() throws InterruptedException {
+//        DriverFactory obj = new DriverFactory() {};
+//        driver = obj.getDriver("chrome", true);
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverFactoryFirefoxHeadless() throws InterruptedException {
+//        DriverFactory obj = new DriverFactory() {};
+//        driver = obj.getDriver("firefox", true);
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverFactoryOperaHeadless() throws InterruptedException {
+//        DriverFactory obj = new DriverFactory() {};
+//        driver = obj.getDriver("opera", true);
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverMethodsDefault() throws InterruptedException {
+//        DriverMethods obj = new DriverMethods();
+//        driver = obj.driver;
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverMethodsChrome() throws InterruptedException {
+//        DriverMethods obj = new DriverMethods("chrome");
+//        driver = obj.driver;
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverMethodsFirefox() throws InterruptedException {
+//        DriverMethods obj = new DriverMethods("firefox");
+//        driver = obj.driver;
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverMethodsOpera() throws InterruptedException {
+//        DriverMethods obj = new DriverMethods("opera");
+//        driver = obj.driver;
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
+//
+//    @Test
+//    public void testDriverMethodsEdge() throws InterruptedException {
+//        DriverMethods obj = new DriverMethods("edge");
+//        driver = obj.driver;
+//        driver.get("http://www.google.co.in");
+//        synchronized (driver) { driver.wait(2000); }
+//    }
 
     @AfterMethod
     public void tearDown() {
