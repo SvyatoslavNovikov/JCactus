@@ -4,22 +4,13 @@
  */
 
 import jcactus.driver.DriverFactory;
-import jcactus.driver.DriverMethods;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class DriverFactoryTest {
 
     WebDriver driver;
-
-    @Test
-    public void testSystemChromeDriver() throws InterruptedException {
-        driver = new ChromeDriver();
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
 
     @Test
     public void testDriverFactoryDefault() throws InterruptedException {
@@ -53,15 +44,6 @@ public class DriverFactoryTest {
         synchronized (driver) { driver.wait(2000); }
     }
 
-    //ToDo Проблемы при запуске edge
-//    @Test
-//    public void testDriverFactoryEdge() throws InterruptedException {
-//        DriverFactory obj = new DriverFactory() {};
-//        jcactus.driver = obj.getDriver("edge");
-//        jcactus.driver.get("http://www.google.co.in");
-//        synchronized (jcactus.driver) { jcactus.driver.wait(2000); }
-//    }
-
     @Test
     public void testDriverFactoryChromeHeadless() throws InterruptedException {
         DriverFactory obj = new DriverFactory() {};
@@ -86,43 +68,11 @@ public class DriverFactoryTest {
         synchronized (driver) { driver.wait(2000); }
     }
 
-    @Test
-    public void testDriverMethodsDefault() throws InterruptedException {
-        DriverMethods obj = new DriverMethods();
-        driver = obj.driver;
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverMethodsChrome() throws InterruptedException {
-        DriverMethods obj = new DriverMethods("chrome");
-        driver = obj.driver;
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverMethodsFirefox() throws InterruptedException {
-        DriverMethods obj = new DriverMethods("firefox");
-        driver = obj.driver;
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
-    @Test
-    public void testDriverMethodsOpera() throws InterruptedException {
-        DriverMethods obj = new DriverMethods("opera");
-        driver = obj.driver;
-        driver.get("http://www.google.co.in");
-        synchronized (driver) { driver.wait(2000); }
-    }
-
     //ToDo Проблемы при запуске edge
 //    @Test
-//    public void testDriverMethodsEdge() throws InterruptedException {
-//        DriverMethods obj = new DriverMethods("edge");
-//        jcactus.driver = obj.jcactus.driver;
+//    public void testDriverFactoryEdge() throws InterruptedException {
+//        DriverFactory obj = new DriverFactory() {};
+//        jcactus.driver = obj.getDriver("edge");
 //        jcactus.driver.get("http://www.google.co.in");
 //        synchronized (jcactus.driver) { jcactus.driver.wait(2000); }
 //    }
@@ -131,4 +81,5 @@ public class DriverFactoryTest {
     public void tearDown() {
         driver.quit();
     }
+
 }
