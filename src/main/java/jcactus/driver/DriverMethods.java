@@ -5,7 +5,7 @@
  * Implement WebDriver in your class which globally used for WebDriver access
  */
 
-package driver;
+package jcactus.driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
