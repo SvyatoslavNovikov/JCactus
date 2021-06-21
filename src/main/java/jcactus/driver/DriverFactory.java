@@ -4,7 +4,7 @@
  *
  * Step 1: Create a DriverFactory class which instantiates WebDriver
  */
-package driver;
+package jcactus.driver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

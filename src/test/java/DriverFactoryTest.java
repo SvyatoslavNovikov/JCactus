@@ -3,8 +3,8 @@
  * http://defectracker.com/2019/08/02/instantiating-webdriver-with-driverfactory/
  */
 
-import driver.DriverFactory;
-import driver.DriverMethods;
+import jcactus.driver.DriverFactory;
+import jcactus.driver.DriverMethods;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -57,9 +57,9 @@ public class DriverFactoryTest {
 //    @Test
 //    public void testDriverFactoryEdge() throws InterruptedException {
 //        DriverFactory obj = new DriverFactory() {};
-//        driver = obj.getDriver("edge");
-//        driver.get("http://www.google.co.in");
-//        synchronized (driver) { driver.wait(2000); }
+//        jcactus.driver = obj.getDriver("edge");
+//        jcactus.driver.get("http://www.google.co.in");
+//        synchronized (jcactus.driver) { jcactus.driver.wait(2000); }
 //    }
 
     @Test
@@ -122,9 +122,9 @@ public class DriverFactoryTest {
 //    @Test
 //    public void testDriverMethodsEdge() throws InterruptedException {
 //        DriverMethods obj = new DriverMethods("edge");
-//        driver = obj.driver;
-//        driver.get("http://www.google.co.in");
-//        synchronized (driver) { driver.wait(2000); }
+//        jcactus.driver = obj.jcactus.driver;
+//        jcactus.driver.get("http://www.google.co.in");
+//        synchronized (jcactus.driver) { jcactus.driver.wait(2000); }
 //    }
 
     @AfterMethod
